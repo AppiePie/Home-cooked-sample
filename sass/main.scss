@@ -1,0 +1,15 @@
+@import "abstracts/_functions.scss";
+@import "abstracts/_colors.scss";
+@import "abstracts/_typhography.scss";
+@import "abstracts/_general.scss";
+@import "abstracts/mixin";
+
+@import "base/typography";
+@import "layout/general";
+@import "layout/nav";
+@import "layout/home";
+@import "layout/about";
+@import "layout/fact";
+@import "layout/meals";
+@import "layout/testimonial";
+@import "layout/footer";

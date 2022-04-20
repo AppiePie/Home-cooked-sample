@@ -1,0 +1,233 @@
+@import url(https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap);
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #5d5d5d;
+  font-weight: 300;
+  text-align: center; }
+  @media only screen and (min-width: 450px) {
+    body {
+      font-size: 1.125rem; } }
+
+h1,
+h2,
+h3,
+p,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0; }
+
+h1,
+h2 {
+  font-family: "Abril Fatface", cursive; }
+
+h3 {
+  color: #212121;
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-size: 1.3125rem;
+  margin-top: 2em;
+  margin-bottom: 0.5em; }
+
+p {
+  margin-bottom: 0.8em; }
+
+.page-title {
+  color: #fff;
+  font-size: 3rem;
+  line-height: 1.2; }
+  @media only screen and (min-width: 450px) {
+    .page-title {
+      font-size: 5rem; } }
+
+.section__title {
+  color: #f55d3e;
+  font-size: 3rem;
+  line-height: 1;
+  list-style: none; }
+  @media only screen and (min-width: 450px) {
+    .section__title {
+      font-size: 3.75rem; } }
+  .section__title--white {
+    color: #fff; }
+.section__subtitle {
+  color: #9d9d9d;
+  font-size: 1.68rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-top: 0.75em; }
+  .section__subtitle::after {
+    content: "";
+    display: block;
+    margin: 2em auto;
+    background: currentColor;
+    height: 1px;
+    width: 25%; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+body {
+  margin: 0; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.section {
+  padding: 4em 2em; }
+
+.nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 2em; }
+  .nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "Abril Fatface", cursive;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto; }
+  .nav a {
+    color: #fff;
+    text-decoration: none; }
+
+.logo {
+  display: none; }
+  @media only screen and (min-width: 450px) {
+    .logo {
+      display: inline-block;
+      fill: #fff;
+      border-radius: 50%;
+      width: 120px;
+      background-color: red; } }
+
+.section--home {
+  background: url(/image/hero-background.jpg);
+  background-size: cover;
+  padding: 10em 2em;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.section--about__image {
+  box-shadow: 0 0 0.5em rgba(157, 157, 157, 0.65); }
+@media only screen and (min-width: 860px) {
+  .section--about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+    grid-column-gap: 2em;
+    max-width: 1200px;
+    margin: 0 auto; }
+    .section--about__title, .section--about__subtitle, .section--about__heading, .section--about__body {
+      grid-column: 2/3; }
+    .section--about__subtitle {
+      margin-bottom: 0; }
+      .section--about__subtitle::after {
+        display: none; }
+    .section--about__image {
+      grid-row: 1/6;
+      transform: translateY(-30%); } }
+
+.section--facts {
+  background: #f3f3f3; }
+
+.facts__text {
+  max-width: 450px;
+  margin: 0 auto; }
+  @media only screen and (min-width: 860px) {
+    .facts__text {
+      display: grid;
+      grid: auto-flow/repeat(4, 1fr);
+      grid-gap: 2em;
+      max-width: 1200px; } }
+
+.section--meals {
+  background: url(/image/meals-background.jpg);
+  color: #fff; }
+
+.meals {
+  font-weight: 400;
+  max-width: 450px;
+  margin: 0 auto; }
+  .meals__meal {
+    position: relative;
+    margin-bottom: 2em; }
+  .meals__image {
+    display: block; }
+  .meals__caption {
+    position: absolute;
+    background: rgba(33, 33, 33, 0.5);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2em; }
+  .meals__title {
+    color: #fff;
+    margin-top: 0; }
+  @media only screen and (min-width: 860px) {
+    .meals {
+      display: grid;
+      grid: auto-flow/repeat(3, 1fr);
+      grid-gap: 2em;
+      max-width: 1200px; }
+      .meals .meals__caption {
+        opacity: 0;
+        overflow: hidden;
+        max-height: 0;
+        transition: opacity 500ms ease-in, max-height 1500ms ease-in-out; }
+      .meals .meals__meal:hover .meals__caption {
+        max-height: 600px;
+        opacity: 100%; } }
+
+.testimonials {
+  max-width: 450px;
+  margin: 0 auto;
+  margin-top: 2em; }
+  @media only screen and (min-width: 860px) {
+    .testimonials {
+      display: grid;
+      grid: auto-flow/repeat(3, 1fr);
+      grid-gap: 2em;
+      max-width: 1200px; } }
+
+.testimonial {
+  box-shadow: 0 0 0.5em rgba(157, 157, 157, 0.65);
+  margin-bottom: 2em; }
+  .testimonial__body {
+    padding: 2em; }
+  .testimonial__credit {
+    background: #f3f3f3;
+    padding: 2em; }
+  .testimonial__name {
+    font-weight: 900;
+    margin: 0; }
+    .testimonial__name::after {
+      content: "";
+      display: block;
+      margin: 0.5em auto;
+      background: currentColor;
+      height: 1px;
+      width: 50px;
+      opacity: 0.25; }
+  .testimonial__position {
+    font-size: 0.9em;
+    margin: 0;
+    color: #9d9d9d; }
+
+.footer {
+  background: #5d5d5d;
+  color: #f3f3f3;
+  padding: 2em; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,43 @@
+.section--meals {
+  background: url(/image/meals-background.jpg);
+  color: gray(1);
+}
+.meals {
+  font-weight: $fw-normal;
+  @include limit-width();
+  &__meal {
+    position: relative;
+    margin-bottom: $spacer;
+  }
+  &__image {
+    display: block;
+  }
+  &__caption {
+    position: absolute;
+    background: rgba(gray(5), 0.5);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: $spacer;
+  }
+  &__title {
+    color: gray(1);
+    margin-top: 0;
+  }
+  @include mq(big) {
+    .meals {
+      &__caption {
+        opacity: 0;
+        overflow: hidden;
+        max-height: 0;
+        transition: opacity 500ms ease-in, max-height 1500ms ease-in-out;
+      }
+      &__meal:hover .meals__caption {
+        max-height: 600px;
+        opacity: 100%;
+      }
+    }
+
+    @include grid();
+  }
+}
